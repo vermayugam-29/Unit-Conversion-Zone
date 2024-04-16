@@ -22,8 +22,11 @@
         </div>  
         <form id="form" class="mt-4">
             <div class="flex flex-row gap-3">
-                <input id="input" type="number" class="w-1/2 border border-gray-300 rounded px-3 py-2 
-                focus:outline-none focus:border-blue-500" autocomplete="off">
+                <div class="flex flex-col w-1/2">
+                    <input id="input" type="text" class="w-full border border-gray-300 rounded px-3 py-2 
+                    focus:outline-none focus:border-blue-500" autocomplete="off">
+                    <div id = "invalid" class="text-xs text-red-600"></div>
+                </div>
                 <select id="unit" class="w-1/2 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
                     
                 </select>
