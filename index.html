@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="faviconLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversion Zone</title>
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100">
+    <div class="bg-white rounded-lg shadow-md p-8 max-w-xs">
+        <h1 class="text-2xl font-bold mb-4">Unit Converter</h1>
+        <div>
+            <label for="options" class="block mb-2">Select Conversion Type</label>
+            <select id="options" class="block w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
+                <option value="sel">Select</option>
+                <option value="temp">Temperature</option>
+                <option value="mass">Mass</option>
+                <option value="len">Length</option>
+            </select>
+        </div>  
+        <form id="form" class="mt-4">
+            <div class="flex flex-row gap-3">
+                <input id="input" type="number" class="w-1/2 border border-gray-300 rounded px-3 py-2 
+                focus:outline-none focus:border-blue-500" autocomplete="off">
+                <select id="unit" class="w-1/2 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
+                    
+                </select>
+            </div>
+            <div class="flex flex-row gap-3 mt-4">
+                <div id="res" class="w-1/2 h-[47px] border border-gray-300 rounded px-3 py-2 max-h-[100px]
+                 overflow-y-auto">
+                </div>
+                <select id="output" class="w-1/2 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
+                    
+                </select>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
