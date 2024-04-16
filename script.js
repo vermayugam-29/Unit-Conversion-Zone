@@ -187,21 +187,23 @@ options1.addEventListener('change', function(event) {
                 `, outputOptions);
                 outputOptions.addEventListener('change', function(e) {
                     const opt = e.target.value;
-                    if(isNaN(input.value)){
-                        invalidInput()
-                    } else if (opt === "kg") {
-                        const ans = parseFloat(input.value) * 0.453592;
-                        res.innerHTML = `${ans}`;
-                    } else if (opt === "g") {
-                        const ans = parseFloat(input.value) * 453.592;
-                        res.innerHTML = `${ans}`;
-                    } else if (opt === "mg") {
-                        const ans = parseFloat(input.value) * 453592.37;
-                        res.innerHTML = `${ans}`;
-                    } else if(opt === "oz"){
-                        const ans = parseFloat(input.value) * 16;
-                        res.innerHTML = `${ans}`;
-                    }
+                    input.addEventListener('input',function(){
+                        if(isNaN(input.value)){
+                            invalidInput()
+                        } else if (opt === "kg") {
+                            const ans = parseFloat(input.value) * 0.453592;
+                            res.innerHTML = `${ans}`;
+                        } else if (opt === "g") {
+                            const ans = parseFloat(input.value) * 453.592;
+                            res.innerHTML = `${ans}`;
+                        } else if (opt === "mg") {
+                            const ans = parseFloat(input.value) * 453592.37;
+                            res.innerHTML = `${ans}`;
+                        } else if(opt === "oz"){
+                            const ans = parseFloat(input.value) * 16;
+                            res.innerHTML = `${ans}`;
+                        }
+                    })
                 });
             } else if(unitSelect === "oz"){
                 changeInnerHtml(`
@@ -213,21 +215,23 @@ options1.addEventListener('change', function(event) {
                 `, outputOptions);
                 outputOptions.addEventListener('change', function(e) {
                     const opt = e.target.value;
-                    if(isNaN(input.value)){
-                        invalidInput()
-                    } else if (opt === "kg") {
-                        const ans = parseFloat(input.value) * 0.0283495;
-                        res.innerHTML = `${ans}`;
-                    } else if (opt === "g") {
-                        const ans = parseFloat(input.value) * 28.3495;
-                        res.innerHTML = `${ans}`;
-                    } else if (opt === "mg") {
-                        const ans = parseFloat(input.value) * 28349.5;
-                        res.innerHTML = `${ans}`;
-                    } else if(opt === "lbs"){
-                        const ans = parseFloat(input.value) * 0.0625;
-                        res.innerHTML = `${ans}`;
-                    }
+                    input.addEventListener('input',function(){
+                        if(isNaN(input.value)){
+                            invalidInput()
+                        } else if (opt === "kg") {
+                            const ans = parseFloat(input.value) * 0.0283495;
+                            res.innerHTML = `${ans}`;
+                        } else if (opt === "g") {
+                            const ans = parseFloat(input.value) * 28.3495;
+                            res.innerHTML = `${ans}`;
+                        } else if (opt === "mg") {
+                            const ans = parseFloat(input.value) * 28349.5;
+                            res.innerHTML = `${ans}`;
+                        } else if(opt === "lbs"){
+                            const ans = parseFloat(input.value) * 0.0625;
+                            res.innerHTML = `${ans}`;
+                        }
+                    })
                 });
             }
         });
@@ -324,4 +328,3 @@ function invalidInput() {
         input.style.borderColor = '';
     }, 1000);
 }
-
